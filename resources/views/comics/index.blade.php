@@ -1,11 +1,13 @@
 
 @extends('layouts.app')
+@section('Comics')
+    
 
 @section('content')
 <div class="container text-center">
     <div class="row py-5">
         @foreach($comics as $comic)
-        <div class="col-2">
+        <div class="col-xl-2 col-md-4">
             <a href="{{route('comic', ['comic' => $comic->id])}}">
                 <div class="card text-center">
                     <img src="{{$comic->thumb}}" alt="" class="m-auto">
@@ -14,6 +16,8 @@
             </a>
         </div>
         @endforeach
+       
+       <button class="load-more text-center mb-5"><a class="text-light nav-link" href="{{route('comics.create')}}"> ADD A COMIC</a></button>
     </div>
 
 @endsection

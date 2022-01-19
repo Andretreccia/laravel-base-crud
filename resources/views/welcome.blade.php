@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'HomePage') 
 
 
 @section('content')
@@ -6,7 +7,7 @@
     <div class="row py-5">
         
     </div>
-    <button class="load-more text-center mb-5"> LOAD MORE</button>
+    {{-- <button class="load-more text-center mb-5"> LOAD MORE</button> --}}
 </div>
 <div class="shop_comics">
     <div class="container">

@@ -1,8 +1,8 @@
 <header id="site_header">
     <div class="banner">
         <div class="d-flex container justify-content-end text-white">
-            <span>scritta 1</span>
-            <span>scritta 2</span>
+            <span class="me-5">Dc power&trade; visa &reg; </span>
+            <span>  Additional dc sites <span>&dtrif; </span> </span>
         </div>
     </div>
 
@@ -11,15 +11,17 @@
             <a class="" href="{{route('welcome')}}">
                 <img src="{{asset('img/dc-logo.png')}}" alt="brand logo" class="d-inline-block align-text-top">
             </a>
-            <ul class="navbar-nav d-flex flex-row">
-                <li class="nav-item">
+            <ul class="navbar-nav d-flex flex-row flex-wrap">
+                {{-- <li class="nav-item">
                     <a class="nav-link active" href="#">CHARACTERS</a>
+                </li> --}}
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{route('comics')}}">COMICS</a>      
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{route('comics')}}">COMICS</a>
-                      
-                </li>
-                <li class="nav-item">
+                   <a class="nav-link active" href="{{route('welcome')}}">HOMEPAGE</a>
+               </li>
+                {{-- <li class="nav-item">
                     <a class="nav-link active" href="#">MOVIES</a>
                 </li>
                 <li class="nav-item">
@@ -42,7 +44,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="#">SHOP</a>
-                </li>
+                </li> --}}
             </ul>
             <div class="nav_search">
                 <input type="text" placeholder="Search">
