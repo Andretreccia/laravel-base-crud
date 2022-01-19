@@ -2,3 +2,273 @@
 
 @use 'bootstrap';
 
+$color_primary : #0282f9;
+$background_sec : #1c1c1c;
+$color_banner: #00a9d9;
+$color_banner2: #55BA59;
+$text_banner_2: #BAFD9C;
+body{
+     font-family: "Greta Sans Medium","Greta Sans Regular",Arial,sans-serif;
+}
+
+#site_header{
+    .banner{
+        background-color: $color_primary;
+    }
+    nav{
+        .container{
+            ul{
+                height: 103px;
+                display: flex;
+                line-height: 90px;
+                li{
+                    margin: 10px;
+                    height: 100%;
+                    border-bottom: 5px solid transparent;
+                    a{
+                        font-weight: bold;
+                    }
+                    &:hover{
+                        border-bottom: 5px solid $color_primary;
+                    }
+                }
+            }
+            .nav_search{
+                border-bottom: 2px solid $color_primary;
+                input{
+                    border: none;
+                    text-align: end;
+                }
+            }
+        }
+    }
+}
+/* #site_header */
+
+#site_main{
+    background: $background_sec;
+    .jumbotron{
+        height: 400px;
+        img{
+           height: 400px;
+            width: 100%;
+            object-fit: cover;
+            object-position: top
+        };
+    }
+    .card{
+        border: none;
+        background: transparent;
+        img{
+             height: 160px;
+        width: 160px;
+        object-fit: cover;
+        object-position: top;
+        }
+        h4{
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+        }
+    }
+     .load-more{
+                margin-top: 50px;
+                border: 2px solid #0282f9;
+                background: #0282f9;
+                color: white;
+                padding: 12px 70px; 
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: 600;
+      }
+      .shop_comics{
+        background-color: #0282F9;
+        height: 150px;
+           .row{
+             padding: 0 16px;
+             display: flex;
+             justify-content: space-between;
+               align-items: center;
+               height: 120px;
+           
+             .col{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+                color: white;
+                cursor: pointer;
+
+                img{
+                  width: 40px;
+                  margin: 10px;
+                }
+                span{
+                  font-size: 15px;
+                }
+             }
+           } 
+  }
+}
+
+/* #site_main */
+
+#site_footer{
+  .footer-container{
+    padding: 30px 0;
+    background: url(/img/dc-logo-bg.png) 68% no-repeat, url(/img/footer-bg.jpg) no-repeat;
+    background-size: 650px, cover;
+
+    .container-link{
+      display: flex;
+      flex-direction: row;
+      .col{
+        width: 170px;
+        h3{
+          color: white;
+          margin: 20px 0;
+        }
+        .footer-link-list{
+          ul{
+            list-style: none;
+            li{
+                margin: 5px 0;
+              a{
+                font-size: 12px;
+              text-decoration: none;
+              color:#959595;
+              &:hover{
+                color: white;
+                
+              }
+            }
+            }
+   ;
+          }
+        }
+      }
+    }
+  }
+  .footer-banner{
+    background: #303030;
+    .fot{
+        justify-content: space-between;
+        button{
+                width: fit-content;
+                border: 2px solid #0282f9;
+                background: #303030;
+                color: white;
+                padding: 12px; 
+                margin: 30px 0;
+                font-size: 18px;
+                cursor: pointer;
+        }
+        .social{
+            display: flex;
+            align-items: center;
+            img{
+                margin: 0 10px;
+            }
+            a{
+                text-decoration: none;
+                color: #0282f9;
+                font-weight: 600;
+                margin-right: 5px;
+            }
+        }
+    }
+    
+  }
+
+}
+/* /#site_footer */
+
+#comic{
+    background-color: white;
+    .banner{
+        background-color: $color_primary;
+        height: 80px;
+        .container{
+            .comic_thumb{
+                position: relative;
+                display: inline-block;
+                border: 2px solid white;
+                bottom: 260px;
+                :first-child{
+                    position: absolute;
+                    top: 0;
+                    left: 0;            
+                     
+                }
+                :last-child{
+                    display: block;
+                    text-align: center;
+                    
+                }
+                :first-child, :last-child{
+                    font-size: 14px;
+                     background-color: $color_banner;
+                      color: white;
+                      padding: 1px 5px;  
+
+                }
+            }
+        }
+
+    }
+    .container{
+        h2{
+            color: $background_sec;
+        }
+        .banner{
+            display: flex;
+            background-color: $color_banner2;
+            border-bottom: 1px solid black;
+            height: 50px;
+            padding: 0 1rem;
+            span{
+                color: white;
+            }
+                .price{
+                    display: flex;
+                    border-right: 1px solid black;
+                    padding: 0.5rem;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 70%;
+                     color: $text_banner_2;
+                     span{
+                         color: white;
+                     }
+                }
+                .availability{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30%;
+                    color: white;
+                }
+
+            
+        }
+    }
+    .details{
+        border-top: 2px solid gray;
+        .container{
+                display: flex;
+            .col-6{
+                :first-child{
+                    border-bottom: 1px solid lightgray;
+                
+                }
+                
+                .sx{
+                   width: 300px;
+                }
+        }
+        }
+    }
+}
+
+/* #comic */
+
