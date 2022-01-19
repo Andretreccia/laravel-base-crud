@@ -13,6 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
 });
+ */
+
+Route::get('/', function () {
+    /* $comics = config('data')['comics']; */
+    return view(
+        'welcome',
+        /* compact('comics') */
+    );
+})->name('welcome');
+
+
+/* Route::get('comic/{id}', function ($id) {
+    $comics = config('data')['comics'];
+    $comic = $comics[$id];
+    return view('comic', compact('comic'));
+})->name('comic'); */
+
+Route::get('comics', 'ComicController@index')->name('comics');
+Route::get('comics/{comic}', 'ComicController@show')->name('comic');

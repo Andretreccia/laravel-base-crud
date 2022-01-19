@@ -2,7 +2,9 @@
 
 
 @section('content')
+SHOW
 
-<H1>home page</H1>
+
+
 
 @endsection
