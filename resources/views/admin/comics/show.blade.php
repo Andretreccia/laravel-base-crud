@@ -15,7 +15,15 @@
         </div>
     </div>
     <section>
-        <h2>ADMIN SECTION ADMIN SECTION ADMIN SECTION</h2>
+        {{-- admin --}}
+
+
+        <h1 style="font-size:100px" class="">ADMIN SECTION </h1>
+        <a class="btn-primary" href="{{route('admin.comic.edit', $comic->id)}}">EDIT</a>
+        <button class="btn-danger">DELETE</button>
+
+        
+        {{-- admin --}}
         <div class="container d-flex py-5">
             <div class="col-6">
                 <h2 class="fs-3 fw-bold">{{$comic->title}}</h2>

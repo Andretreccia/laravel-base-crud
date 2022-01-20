@@ -9,7 +9,7 @@
         <h2 class="text-light">ADMIN SECTION</h2>
         @foreach($comics as $comic)
         <div class="col-xl-2 col-md-4">
-            <a href="{{route('comic', ['comic' => $comic->id])}}">
+            <a href="{{route('admin.comic', ['comic' => $comic->id])}}">
                 <div class="card text-center">
                     <img src="{{$comic->thumb}}" alt="" class="m-auto">
                     <h4 class="text-uppercase">{{$comic->series}}</h4>
