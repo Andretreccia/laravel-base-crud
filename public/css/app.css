@@ -11318,7 +11318,7 @@ body {
   font-weight: 600;
 }
 #site_main .shop_comics {
-  background-color: #0282F9;
+  background-color: #0282f9;
   height: 150px;
 }
 #site_main .shop_comics .row {
@@ -11420,6 +11420,9 @@ body {
   border: 2px solid white;
   bottom: 260px;
 }
+#comic .banner .container .comic_thumb img {
+  max-height: 291px;
+}
 #comic .banner .container .comic_thumb :first-child {
   position: absolute;
   top: 0;
@@ -11429,7 +11432,8 @@ body {
   display: block;
   text-align: center;
 }
-#comic .banner .container .comic_thumb :first-child, #comic .banner .container .comic_thumb :last-child {
+#comic .banner .container .comic_thumb :first-child,
+#comic .banner .container .comic_thumb :last-child {
   font-size: 14px;
   background-color: #00a9d9;
   color: white;
@@ -11440,7 +11444,7 @@ body {
 }
 #comic .container .banner {
   display: flex;
-  background-color: #55BA59;
+  background-color: #55ba59;
   border-bottom: 1px solid black;
   height: 50px;
   padding: 0 1rem;
@@ -11455,7 +11459,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 70%;
-  color: #BAFD9C;
+  color: #bafd9c;
 }
 #comic .container .banner .price span {
   color: white;

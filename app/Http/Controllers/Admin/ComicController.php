@@ -45,7 +45,7 @@ class ComicController extends Controller
         $comic->description = $request->description;
         $comic->thumb = $request->thumb;
         $comic->save();
-        return redirect()->route('comics');
+        return redirect()->route('admin.comics');
     }
     /* $comic->price = $request->price;
     $comic->series = $request->series;
@@ -107,5 +107,7 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         //
+        $comic->delete();
+         return redirect()->route('admin.comics');
     }
 }

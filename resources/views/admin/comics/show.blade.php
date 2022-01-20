@@ -20,8 +20,11 @@
 
         <h1 style="font-size:100px" class="">ADMIN SECTION </h1>
         <a class="btn-primary" href="{{route('admin.comic.edit', $comic->id)}}">EDIT</a>
-        <button class="btn-danger">DELETE</button>
-
+        <form action="{{route('admin.comic.destroy', $comic->id)}}" method="post">
+            @csrf
+            @method('DELETE')
+            <button class="btn-danger" type="submit">DELETE</button>
+        </form>
         
         {{-- admin --}}
         <div class="container d-flex py-5">
