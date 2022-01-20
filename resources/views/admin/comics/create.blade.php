@@ -3,7 +3,8 @@
     
 @section('content')
 <div class="container">
-    <form class="py-5" action="{{route('comics.store')}}">
+    <h2 class="text-light">ADMIN SECTION</h2>
+    <form class="py-5" method="post" action="{{route('admin.comics.store')}}">
     @csrf
         <label class="text-light" for="title">Insert a title</label>
         <input class="form-control mb-3" type="text" name="title" id="title">

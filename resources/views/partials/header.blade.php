@@ -21,6 +21,9 @@
                 <li class="nav-item">
                    <a class="nav-link active" href="{{route('welcome')}}">HOMEPAGE</a>
                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{route('admin.comics')}}">ADMIN</a>      
+                </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link active" href="#">MOVIES</a>
                 </li>
