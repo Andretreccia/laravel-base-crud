@@ -18,13 +18,37 @@
         {{-- admin --}}
 
 
-        <h1 style="font-size:100px" class="">ADMIN SECTION </h1>
-        <a class="btn-primary" href="{{route('admin.comic.edit', $comic->id)}}">EDIT</a>
+        <div class="container">
+            <h1 style="font-size:100px" class="">ADMIN SECTION </h1>
+        <a class="" href="{{route('admin.comic.edit', $comic->id)}}"><button type="button" class="btn btn-primary">EDIT</button></a>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  DELETE
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure to delete this comic?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <form action="{{route('admin.comic.destroy', $comic->id)}}" method="post">
             @csrf
             @method('DELETE')
-            <button class="btn-danger" type="submit">DELETE</button>
+            <button class="btn btn-danger" type="submit">DELETE</button>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
         
         {{-- admin --}}
         <div class="container d-flex py-5">
